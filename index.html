@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Web Speech</title>
+
+  <link rel="stylesheet" href="css/demo-styles.css" />
+   <link rel="stylesheet" href="css/about.css" />
+
+</head>
+
+<body>
+ 
+ 
+<div class="demo-wrapper">
+ 
+  <div class="demo-overlay">
+    <br><br><br>
+  
+    <div class="view-demo-button">Hover to Enter Site</div>
+   By:Sumit Kumar
+  </div>
+
+  
+ 
+ 
+  <div class="page text2speech-page">
+    <h2 class="page-title">Enter Input</h2>
+
+    <div id="sumit">
+    <form action="http://translate.google.com/translate_tts" method="GET">
+      <input type="hidden" value="en" name="tl" />
+      <input type="text" name="q" required />
+      <br>
+      <input type="submit" value="speak" />
+    </form></div>
+    
+    <div class="close-button">x</div>
+  </div>
+ 
+
+
+
+  <div class="page email-page">
+    <h2 class="page-title">Speak</h2>
+    <div id="email" style="border:dotted;padding:10px; height:200px;">
+    <span contenteditable="true" id="final_span"></span>
+    <span contenteditable="true" id="interim_span" style="color:grey;background-color:beige;overflow:hidden;font-size:0.5em;"></span>
+   
+    </div> 
+    <button id="emailbutton" onclick="toggleStartStop()">click to speak</button>
+     <button id="clipbutton" onclick="copytoclip()">copy to clipboard</button>
+    <div class="close-button">x</div>
+  </div>
+
+
+
+<div class="page aboutme-page">
+    
+    
+    <div class="close-button">x</div>
+
+
+<div id="triangle">About
+</div>  
+
+
+ 
+  <div class="avatar">
+   
+    <img src="./images/1.jpg" class="user"/>
+   <div id="sumit1">My name is Sumit.<br>
+If you’d like to get in touch with me, please  e-mail me directly at sumit27@outlook.com </div>
+   
+  </div>
+  </div>
+  <div class="page translate-page">
+    
+     <h2 class="page-title">English to Hindi</h2>
+    <div id="trans">
+        <input type="hidden" name="action" value="translateREST" /> 
+<input id="src"type="hidden" name="src" value="en" />
+<input id="dest" type="hidden" name="dest" value="fr" />
+<input id="te" type="text" name="text" />
+<input id="username" type="hidden" name="username" value="sumitgr8@ymail.com" />
+<input id="password" type="hidden" name="password" value="OMSAIram" />
+<input type="button"  value="click to start" onclick="rec.start()" />
+    <input type="button"  value="submit" onclick="formsubmi()"/>
+   </div><br>
+   <div id="translated"></div>
+    <div class="close-button">x</div>
+  </div>
+
+
+  <div class="dashboard clearfix">
+      <div class="col1 clearfix">
+         <div class="big notes-thumb" data-page="text2speech-page">
+          <span class="icon-font" aria-hidden="true" data-icon="&#xe003;"></span>
+          <p> Text2Speech</p>
+        </div>
+      
+
+       <div class="lock-thumb">
+          Bing<span class="youtube-font" aria-hidden="true" data-icon="&#xe00b;"></span>
+       <form id="bin" action="http://www.bing.com/search">
+    <input type="search" id="a" name="q" size=60 onfocus="markActiveLink(this);">
+    
+  </form>
+        </div>
+        
+        
+        <div class="todos-thumb">
+          <p>Dictionary</p>
+            <span class="todos-thumb-span">
+              <input id="dict" type="text" />
+            </span>
+          
+        </div>
+      </div>
+      <div class="col2 clearfix">
+        
+        <div class="google-thumb">
+          Google<span class="youtube-font" aria-hidden="true" data-icon="&#xe000;"></span>
+       <form id="goo" action="http://www.google.com/search">
+    <input type="search" id="q" name="q" size=60 onfocus="markActiveLink(this);">
+    
+  </form>
+   
+
+    </div>
+
+
+      <div class="youtube-thumb">Youtube <span class="youtube-font" aria-hidden="true" data-icon="&#xe002;"></span>
+        <form id="you" action="http://www.youtube.com/results">
+    <input type="search" id="y" name="search_query" size=60 onfocus="markActiveLink(this);">
+     </form>
+    </div>
+       
+       
+        
+        <div class="weather-thumb"><span class="icon-font" id="wea" aria-hidden="true" data-icon="&#xe012;">
+        </span><div id="display"></div>
+        <div id="weather"></div>
+       </div>
+      </div>
+      <div class="col3 clearfix">      
+        <div class="big translate-thumb" data-page="translate-page"><span class="icon-font" aria-hidden="true" data-icon="&#xe031;"></span><p>Translate</p></div>
+        
+        
+        <div class="big email-thumb" data-page="email-page"><span class="icon-font" aria-hidden="true" data-icon="&#xe043;"></span><p>Email</p></div>
+      
+<div class="big last about-thumb" data-page="aboutme-page"><span class="icon-font" aria-hidden="true" data-icon="&#xe019;"></span>About me</div>
+      </div>
+  </div>
+</div>
+<div>
+ <a href="http://www.facebook.com/sumit.mendiratta"><label class="fb social" data-icon="&#xe00c;"></label></a></label>
+ <a href="http://www.plus.google.com/sumit.mendiratta"><label  class="gp social"  data-icon="&#xe01b;"></label></a></label>
+ <a href="http://www.twitter.com/sumit2793"><label  class="tw social"  data-icon="&#xe01c;"></label></a></label>
+<h3 class="foot">&copy; 2013 sumit mendiratta</h3></div>
+<!--====================================end demo wrapper================================================-->
+  <script src="js/jquery-1.8.2.min.js"></script>
+  <script src="js/run.js"></script>
+  <script src="js/email.js"></script>
+  <script src="js/modernizr-1.5.min.js"></script>
+  <script src="js/prefixfree.min.js"></script>
+<script type="text/javascript">
+
+function markActiveLink(e) {   
+    
+    if(e.id=="q"){
+
+     
+      recognition.start();
+      
+    }
+    else
+    {
+    if(e.id=="y"){
+        xyz.start();
+     }
+    
+     else {
+      bi.start();
+     }
+    
+    
+    }
+
+
+
+}
+
+var recognition = new webkitSpeechRecognition();
+    recognition.onresult = function(event) {
+      if (event.results.length > 0) {
+
+        q.value = event.results[0][0].transcript;
+         q.form.submit();
+        
+
+        
+      }
+    }
+    var xyz = new webkitSpeechRecognition();
+    xyz.onresult = function(event) {
+      if (event.results.length > 0) {
+
+        y.value = event.results[0][0].transcript;
+         y.form.submit();
+        
+
+        
+      }
+    }
+    
+
+    var bi = new webkitSpeechRecognition();
+    bi.onresult = function(event) {
+      if (event.results.length > 0) {
+
+        a.value = event.results[0][0].transcript;
+         a.form.submit();    
+      }
+    }
+
+    
+
+
+
+
+</script>
+  
+</body>
+</html>

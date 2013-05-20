@@ -1,0 +1,11 @@
+Webspeech is a speech recognition system for chrome 26 or higher.
+It works on both http as well as https. http requires permission for accessing microphone every time while https requires only once.
+In my module user can:-
+	1)Search google, youtube ,bing using voice.
+	2)Type Emails, letters using voice.
+	3)Dictionary module is still under construction.
+	4)English to hindi text tranlation using voice.
+	5)Text to speech
+	6)A live tile to display weather and time. 
+ 
+I will be making this as a chrome start page in future. 

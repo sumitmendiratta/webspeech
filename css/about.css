@@ -1,0 +1,70 @@
+
+@font-face {
+  font-family: 'Lato-RegIta';
+  font-style: normal;
+  font-weight: 400;
+ src: url('../fonts/Lato-RegIta.ttf');
+}
+
+
+#triangle {
+  position: fixed;
+  padding: 0px;
+  height: 80px;
+  width: 250px;
+  left: 250px;
+  top: 30px;
+  border-left : 20px solid transparent;
+  color: black;
+  border-bottom: 20px solid brown;
+background-color:white;
+
+-webkit-transform:rotate(-15deg);
+
+
+}
+#sumit1 {
+  font-size: .75em;
+  position: fixed;
+  left:600px;
+  top: 25px;
+  font-family: Lato-RegIta;
+  height: 300px;
+  width: 500px;
+
+}
+  
+    .avatar {
+      position: absolute;
+      left: 100px;
+      top: 160px;
+
+}
+      img {
+
+        height: 280px;
+        width: 250px;
+        background-color:#4db8d6; ;
+        box-shadow: 0 0 0 5px #4db8d6; ;
+        
+        -webkit-transform:rotate(0deg);
+     
+    }
+         img:hover {
+        cursor: pointer; 
+      
+        -webkit-animation:bounceOut .4s linear;
+        
+
+        }
+     
+      
+
+@-webkit-keyframes bounceOut {
+        0%{ box-shadow: 0 0 0 10px #4db8d6; opacity:1;}
+        25%{ box-shadow: 0 0 0 1px #4db8d6; opacity:1;}
+        50%{ box-shadow: 0 0 0 7px #4db8d6; opacity:1; }
+        75%{ box-shadow: 0 0 0 4px #4db8d6; opacity:1;}
+        100%{ box-shadow: 0 0 0 5px #4db8d6; opacity:1;}
+}
+
